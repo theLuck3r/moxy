@@ -1,6 +1,6 @@
 FROM atmoz/sftp
 
-RUN apk --no-cache add rsync
+RUN apt-get update && apt-get install -y rsync
 
 ADD users.conf /etc/sftp/users.conf
 EXPOSE 22
